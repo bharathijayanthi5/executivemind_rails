@@ -1,0 +1,28 @@
+<div class"row">
+ <div class="container">
+<div class="header">
+
+<% if user_signed_in? %>
+  <h5 class="top-item2" style="float:left"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></h5>
+  <div class="items" style="float:right">
+  <h5 class="top-item1" ><%= link_to "New post", new_post_path %></h5>
+</div>
+<% end %>
+<% if !user_signed_in? %>
+ <h5 class="top-item2" style="float:left"><%= link_to "Admin login", new_user_session_path %></h5></br>
+<% end %>
+</div>
+</div>
+</div>
+<div class"row">
+ <div class="container">
+ <% @posts.each do |post| %>
+ <div class="col-xs-4">
+    <%= link_to (image_tag post.image.url(:thumb)), post %>
+ <h2><%= link_to post.title, post %></h2>
+<p>  <%= post.body %></p>
+</div>
+ <% end %>
+
+</div>
+</div>

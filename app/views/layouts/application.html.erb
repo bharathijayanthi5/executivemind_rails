@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OwnBlog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "mdb" %>
+    <%= stylesheet_link_tag "rinjani" %>
+    <%= stylesheet_link_tag "component/component" %>
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "sweetalert" %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" %>
+    <%= javascript_include_tag 'js/jquery-2.2.3', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/tether', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/bootstrap', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/sweetalert-dev', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/sweetalert.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/jquery.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/detectmobilebrowser/detectmobilebrowser', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/smartresize/smartresize', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/jquery-easing/jquery.easing.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/jquery-vide/jquery.vide', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/jquery.sticky', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/jquery.inview.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/owl-carousel/owl.carousel.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'assets/plugins/jquery-validation/jquery.validate.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/main', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/animation', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'js/google-sheet', 'data-turbolinks-track': 'reload' %>
+     <%= favicon_link_tag 'favicon.ico' %>
+  </head>
+
+  <body>
+    <div class="desktop hidden-xs-down">
+   <section id="intro">
+       <div class="intro-body text-center">
+           <div class="container nam">
+               <div class="row kir">
+                   <div class="col-md-12 intro-content">
+                       <div class="logo">
+                          <%= image_tag("logo.png", :alt => "logo") %>
+                       </div>
+                       <div class="intro-text text-center">
+                           <h2>Read Faster, Focus and Retain More. </h2>
+                           <p class="lead">All the best learners are learning with us.</br> You can too. At any age.</p>
+                       </div>
+                       <div class="page-scroll">
+                           <a href="#who-we-are" class="btn btn-lg btn-rj">Learn More</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+ </div>
+<div style="width:100%;background-repeat: no-repeat;background-image:url('/assets/mobii.jpg');background-size:100% 100%;"class="hidden-sm-up mobile">
+   <section id="intro">
+       <div class="intro-body text-center">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-12 intro-content">
+                       <div class="logo">
+                             <%= image_tag("logo.png", :alt => "logo") %>
+                       </div>
+                       <div class="intro-text text-center">
+                           <h2>Read Faster, Focus and Retain More. </h2>
+
+                           <p class="lead">All the best learners are learning with us.</br> You can too. At any age.</p>
+                       </div>
+                       <div class="page-scroll">
+                           <a href="#who-we-are" class="btn btn-lg btn-rj">Learn More</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+ </div>
+
+<nav id="navigation" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-rj-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top">ExecutiveMind</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-rj-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="page-scroll">
+                    <a href="#who-we-are">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#professionals">Professionals</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#young">Young Learners</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#corporates">Corporations</a>
+                </li>
+                <li>
+                    <a href="/posts">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="who-we-are" class="section">
+    <div class="section-inner">
+        <div class="container section-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2 class="main-title">Hi, I'M Katya Seberson!</h2>
+<h5> Do you want to read faster, extract information quickly, study less and still retain everything you learn? We can help.</h5>
+                        <span class="section-line"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                       <%= image_tag("katya.png", :alt => "katya", :class => "img-responsive img-rounded") %>
+                </div>
+                <div class="col-md-5">
+                    <div class="who-we-are-text">
+                        <p style="text-align:justify">I started ExecutiveMind for reasons that are more personal in nature. I was diagnosed with Dyslexia at the age of 8.I had a hard time handling it and had to struggle through all my schooling. I was faking reading comprehension till I was 19 years old, maintaining perfect grades in school and college. I worked on my problem by the thorough study of phonics, observing and imitating what good readers did to improve comprehension. I fixed my reading issues through self-experimentation. Now I share my insights with others.</p>
+<p style="text-align:justify">I have been involved with Speed Reading since college. Over time, I developed my own methodology for better learning and I am glad I did. The program quickly gained momentum and client success stories spread like wildfire.
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="fun-fact" class="section section-bgimage-yes">
+    <div class="section-inner">
+        <div class="section-overlay"></div>
+        <div class="container section-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                      <h3 class="sub-title">THREE COOL FACTS ABOUT LEARNING</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <div class="counter-item not-right-column top-column">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <div class="inner-content">
+                            <span class="number" data-from="30" data-to="75" data-refresh-interval="10">
+                                75%
+                            </span>
+                        </div>
+                        <p>Percent of American adults read at the level of a fourth-grader or below</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <div class="counter-item not-right-column top-column">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+
+                        <div class="inner-content">
+                            <span class="number" data-from="30" data-to="70" data-refresh-interval="10">
+                                70%
+                            </span>
+                        </div>
+                        <p>Percent of information we learn will be forgotten the next day? </p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+                    <div class="counter-item not-right-column">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <div class="inner-content">
+                            <span class="number" data-from="10" data-to="30" data-refresh-interval="10">
+                                30%
+                            </span>
+                        </div>
+                        <p>Percent of the remaining knowledge </br>will be dismissed in FIVE days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+
+    <section id="areas-of-focus" class="section">
+        <div class="section-inner">
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2 class="main-title">Areas of focus</h2>
+                            <span class="section-line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                  <div class="col-sm-4 col-md-4">
+    <div class="content-boxes style-two top-column clearfix">
+        <span class="content-boxes-icon">
+          <i class="fa fa-rocket"></i>
+        </span>
+        <div class="content-boxes-text">
+      <h4>  Speed  </br> Reading</h4>
+
+      <p>  Emphasis on increasing reading speed on paper, computer screen, tablet or your phone by two to three times and improving comprehension as well.</p>
+
+        </div>
+    </div>
+</div>
+
+
+                  <div class="col-sm-4 col-md-4">
+    <div class="content-boxes style-two top-column clearfix">
+        <span class="content-boxes-icon">
+          <i class="fa fa-clone"></i>
+        </span>
+        <div class="content-boxes-text">
+      <h4>  Memory  </br> Skills</h4>
+
+      <p>  Proven techniques that help you retain more - be it names of people you met or critical inputs from a book, long document or TRAINING.</p>
+
+        </div>
+    </div>
+</div>
+
+
+                  <div class="col-sm-4 col-md-4">
+    <div class="content-boxes style-two top-column clearfix">
+        <span class="content-boxes-icon">
+          <i class="fa fa-star-o"></i>
+        </span>
+        <div class="content-boxes-text">
+      <h4>  Learning </br> Skills</h4>
+
+      <p>  Never before covered tools and techniques for learning in the internet era, solving problems that aren&#39;t even talked about.</p>
+
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="section section-bgimage-yes">
+        <div class="section-inner">
+            <div class="section-overlay"></div>
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="quote-text text-center">
+                            <span class="quote-icon">
+                                <i class="fa fa-quote-right fa-4x"></i>
+                            </span>
+                            <h2>Don't let your learning lead to knowledge. Let your learning lead to action.</h2>
+                            <h2 class="lead quote-by">Jim Rohn</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+<section class="section extra-margins text-xs-center" id="professionals"></br>
+    <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Solutions For Professionals </h1>
+    <div class="row">
+
+      <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+        <center><a href="/bootcampforprofessionals">
+           <%= image_tag("1.png", :alt => "katya", :class => "m-b-2") %>
+        </a></center>
+&nbsp;
+    <a href="/bootcampforprofessionals"><h2 class="blue-text "><i class="fa fa-cogs" aria-hidden="true">&nbsp;</i>Workshops</h2></a>
+    <h5> Weekend Group Session in  </br>   our New York Office </h5></br>
+    <p> Speed Reading  </br> &amp; </br> Memory BootCamp</p>
+    <a href="/bootcampforprofessionals"class="btn btn-primary " target="">Register </a>
+</div>
+
+
+      <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+        <center><a href="https://calendly.com/executivemind/15min/10-12-2016">
+          <%= image_tag("2.png", :alt => "katya", :class => "m-b-2") %>
+
+        </a></center>
+&nbsp;
+    <a href="https://calendly.com/executivemind/15min/10-12-2016"><h2 class="blue-text "><i class="fa fa-users" aria-hidden="true">&nbsp;</i>1:1 Coaching</h2></a>
+    <h5>  Our Office or Your Office or anywhere in the world through telepresence </br> </h5></br>
+    <p> Speed Reading, Effective Reading, </br> Memory, Learning, Productivity </br> </p>
+    <a href="https://calendly.com/executivemind/15min/10-12-2016"class="btn btn-primary " target="_blank">Book a FREE Session </a>
+</div>
+
+
+      <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+        <center><a href="https://www.udemy.com/courses/search/?ref=home&amp;src=ukw&amp;q=katya%20seberson&amp;lang=en">
+          <%= image_tag("6.png", :alt => "katya", :class => "m-b-2") %>
+        </a></center>
+&nbsp;
+    <a href="https://www.udemy.com/courses/search/?ref=home&amp;src=ukw&amp;q=katya%20seberson&amp;lang=en"><h2 class="blue-text "><i class="fa fa-fire" aria-hidden="true">&nbsp;</i>Online</h2></a>
+    <h5> We Currently  Have TWO Self-paced ONLINE courses </br> </h5></br>
+    <p> Learning from Video Courses </br> 5 Steps to  </br> Better Memory</p>
+    <a href="https://www.udemy.com/courses/search/?ref=home&amp;src=ukw&amp;q=katya%20seberson&amp;lang=en"class="btn btn-primary " target="_blank">Start Learning Now </a>
+</div>
+
+
+    </div>
+</section>
+
+<section class="section extra-margins text-xs-center" id="young"></br>
+    <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Solutions For Young Learners </h1>
+    <div class="row">
+
+      <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+        <center><a href="/6weekcourse" target="_blank" >
+        <%= image_tag("3.png", :alt => "katya", :class => "m-b-2") %></a></center>
+
+&nbsp;
+    <a href="/6weekcourse" target="_blank"><h2 class="blue-text "><i class="fa fa-cogs ">&nbsp;</i> Workshops</h2></a>
+    <h5> Group Weekend Test Prep</h5></BR>
+    <p>ACT, SAT, ISEE,</br>TACHS, HSPT, COOP. </br> Focus on Vocabulary, Spelling and Reading</p>
+    <p> AGES: 12 - 18 </p>
+    <a href=" /6weekcourse" class="btn btn-primary " target=""> Register</a>
+</div>
+
+
+      <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+        <center><a href="https://calendly.com/executivemind/15min/10-12-2016" target="_blank" >
+        <%= image_tag("4.png", :alt => "katya", :class => "m-b-2") %>
+      </a></center>
+
+&nbsp;
+    <a href="https://calendly.com/executivemind/15min/10-12-2016" target="_blank"><h2 class="blue-text "><i class="fa fa-heart ">&nbsp;</i> Tutoring</h2></a>
+    <h5> Individual Custom Programs</h5></BR>
+    <p>Reading, Fluency, Comprehension,</br>Executive Functioning, Organization,  Memory, Effective Learning Skills. </br> </p>
+    <p> AGES: 9  - 19 </p>
+    <a href=" https://calendly.com/executivemind/15min/10-12-2016" class="btn btn-primary " target="_blank"> Book a FREE Session</a>
+</div>
+
+
+      <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+        <center><a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=katya&#43;seberson&amp;rh=i%3Aaps%2Ck%3Akatya&#43;seberson" target="_blank" >
+
+        <%= image_tag("5.png", :alt => "katya", :class => "m-b-2") %></a></center>
+
+&nbsp;
+    <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=katya&#43;seberson&amp;rh=i%3Aaps%2Ck%3Akatya&#43;seberson" target="_blank"><h2 class="blue-text "><i class="fa fa-book ">&nbsp;</i> Books</h2></a>
+    <h5> 36 Reading</h5></BR>
+    <p>Reading on a Standardized Test</br>We have TWO books on ACT and SAT Reading Passages. </br> </p>
+    <p> AGES: 12 - 18 </p>
+    <a href=" https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&amp;field-keywords=katya&#43;seberson&amp;rh=i%3Aaps%2Ck%3Akatya&#43;seberson" class="btn btn-primary " target="_blank"> Start Learning Now</a>
+</div>
+
+
+    </div>
+</section>
+
+<section class="section extra-margins text-xs-center" id="corporates"></br>
+   <h1 class="section-heading wow fadeIn" data-wow-delay="0.2s">Solutions For Corporations</h1>
+      <div class="row">
+
+        <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+    <center>
+    <%= image_tag("8.png", :alt => "katya", :class => "m-b-2") %></center>
+
+      </br><h2 class="blue-text "><i class="fa fa-cutlery" aria-hidden="true">&nbsp;</i> Lunch &amp; Learn  </h2>
+      <h5>Microlearning</h5>
+       <p>90-minute Seminar</p>
+       <p>Executive Functioning, Organization,  Memory, Effective Learning Skills.</p>
+        <p></p>
+        </div>
+
+
+        <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+    <center>
+    <%= image_tag("10.png", :alt => "katya", :class => "m-b-2") %></center>
+
+      </br><h2 class="blue-text "><i class="fa fa-users" aria-hidden="true">&nbsp;</i> Half-Day Workshop  </h2>
+      <h5>Building Foundations </h5>
+       <p>4 Hours of Instruction &#43; breaks</p>
+       <p>Speed Reading, Remember Everything You Learn, Increase Your Training ROI.</p>
+        <p></p>
+        </div>
+
+
+        <div class="col-md-4 m-b-r wow fadeInUp" data-wow-delay="0.2s">
+
+    <center>
+    <%= image_tag("7.png", :alt => "katya", :class => "m-b-2") %></center>
+
+      </br><h2 class="blue-text "><i class="fa fa-cogs" aria-hidden="true">&nbsp;</i> Full-Day Workshop </h2>
+      <h5>Developing Skills</h5>
+       <p>6 Hours of Instruction &#43; breaks</p>
+       <p>Speed Reading and Information Extraction, Five steps to a Better Memory, Focus and Learn better.</p>
+        <p></p>
+        </div>
+
+
+      </div>
+    <center><a href="/form" class="btn btn-primary" target="_blank">Request More Information</a></center>
+    <p class="ad">Need quick answers for your corporate needs? Check out <a href="/faq">FAQs.</a></p>
+</section>
+
+    </div>
+  </main>
+  <section id="testimonials" class="section section-bgimage-yes">
+    <div class="section-inner">
+        <div class="section-overlay"></div>
+        <div class="container section-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2 class="main-title">Testimonials</h2>
+                        <h3 class="sub-title">Hear it from the horse's mouth</h3>
+                        <span class="section-line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-4">
+    <div class="testimonial-item not-right-column not-bottom-column">
+        <div class="testimonial-content">
+            <p class="testimonial-title">I lost my fear of reading big documents</p>
+            <blockquote>
+                <p>My biggest takeaway from this bootcamp is the loss of my fear to read something big. I am confident that I can read a lengthy book and retain the info using the techniques Katya taught me. </p>
+            </blockquote>
+        </div>
+        <div class="testimonial-info clearfix">
+
+            <%= image_tag("testi1.jpg", :alt => "katya", :class => "img-circle img-thumbnail", :width => "100") %>
+            <p class="testimonial-author">
+                @Melanie Fox, NYC
+                <br>
+                <em>Coach at Speech Fox</em>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+              <div class="col-md-4">
+    <div class="testimonial-item not-right-column not-bottom-column">
+        <div class="testimonial-content">
+            <p class="testimonial-title">I can get through tons of technical text.</p>
+            <blockquote>
+                <p>My reading involves books in Maths and Engineering, basically a lot of technical documentation. Katya&#39;s bootcamp helped me be more efficient and sift through hundreds of pages of text and pick the meatier stuff. </p>
+            </blockquote>
+        </div>
+        <div class="testimonial-info clearfix">
+            <%= image_tag("test2.jpg", :alt => "katya", :class => "img-circle img-thumbnail", :width => "100") %>
+
+            <p class="testimonial-author">
+                @Dan Molly , NYC
+                <br>
+                <em>Math Instructor</em>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+              <div class="col-md-4">
+    <div class="testimonial-item not-right-column not-bottom-column">
+        <div class="testimonial-content">
+            <p class="testimonial-title">Reading is fun again</p>
+            <blockquote>
+                <p>Katya makes you want to learn, she makes you want to improve (your reading skills), and makes you realize that you can improve in a easy way. I now spend less time on reading everyday and what is more valuable than time. </p>
+            </blockquote>
+        </div>
+        <div class="testimonial-info clearfix">
+            <%= image_tag("test3.jpg", :alt => "katya", :class => "img-circle img-thumbnail", :width => "100") %>
+
+            <p class="testimonial-author">
+                @Tina Larsson, NYC
+                <br>
+                <em>President at Folson Group</em>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="partners" class="color_section">
+       <div class="container">
+         <h1 style="text-align:center">Hundreds of Satisfied Customers </h1>
+              <h3 style="text-align:center">Including employees of famous companies like</h3>
+           <div class="row">
+
+             <div class="col-sm-3" class="item">
+    <%= image_tag("download.jpg", :alt => "katya") %>
+
+</div>
+
+
+             <div class="col-sm-3" class="item">
+    <%= image_tag("p1.png", :alt => "katya") %>
+
+</div>
+
+
+             <div class="col-sm-3" class="item">
+               <%= image_tag("p2.png", :alt => "katya") %>
+</div>
+
+
+             <div class="col-sm-3" class="item">
+               <%= image_tag("p3.png", :alt => "katya") %>
+</div>
+
+
+               </div>
+              &nbsp
+               &nbsp
+
+           </div>
+
+   </section>
+
+  <section id="partners" class="color_section">
+       <div class="container">
+         <h1 style="text-align:center">In the Press</h1>
+               <div class="row">
+
+                 <div class="col-sm-3" class="item">
+   <a href="http://www.sheknows.com/parenting/articles/819880/Cell-phone-safety-for-kids" target="_blank">
+     <%= image_tag("p4.png", :alt => "katya") %>
+</a>
+</div>
+
+
+                 <div class="col-sm-3" class="item">
+   <a href="http://www.huffingtonpost.in/entry/how-to-make-online-learning-stick_us_57e57866e4b05d3737be5a7e" target="_blank">
+     <%= image_tag("p5.png", :alt => "katya") %>
+</a>
+</div>
+
+
+                 <div class="col-sm-3" class="item">
+   <a href="https://www.learningsuccessblog.com/blog/dyslexia/overcoming-dyslexia-video?utm_source=dlvr.it&amp;utm_medium=facebook" target="_blank">
+     <%= image_tag("p6.png", :alt => "katya") %>
+</a>
+</div>
+
+
+                 <div class="col-sm-3" class="item">
+   <a href="http://www.yourtango.com/2016286957/why-making-your-bed-every-morning-will-change-your-life" target="_blank">
+     <%= image_tag("p7.png", :alt => "katya") %>
+</a>
+</div>
+
+
+                 </div>
+               </section>
+
+  <section id="coming-soon" class="section section-bgimage-yes" >
+  <div class="section-inner">
+    <div class="section-overlay"></div>
+      <div class="container section-content" >
+         <div class="row" >
+          <form id='foo' >
+           <p>
+           <div class="input-group" >
+             <h5 align="center" style="color:white">Stay on Top of the Latest Innovation in Learning and Reading.  </h5>
+             <label style="color:white">Email Address</label>
+             <input id='email' name='email' type='email' required>
+          </p>
+          <div id='success'></div>
+             <button id="submit" type='submit' class="btn btn-lg btn-rj" value="click" onclick="ClearForm();">Subscribe</button>
+          </div>
+         </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <section id="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-6 footer-column not-right-column">
+                  <div class="footer-text">
+                      <h4>Contact info</h4>
+                      <ul class="icon-list list-unstyled">
+                          <li>
+                              <i class="fa fa-phone"></i> +1 917-379-3081
+                          </li>
+                          <li>
+                              <i class="fa fa-envelope-o"></i> katya@executivemind.net
+                          </li>
+                          <li>
+                              <i class="fa fa-map-marker"></i> &nbsp;&nbsp;315 West 36th Street New York, NY 10018
+                          </li>
+                          <li>
+                              <i class="fa fa-clock-o"></i> Monday to Friday - 8.30 AM to 5 PM
+                          </li>
+                      </ul>
+                      <ul class="social-icon-list list-unstyled list-inline">
+                          <li>
+                              <a href="https://www.facebook.com/executivemind.net/" target="_blank"><i class="fa fa-facebook"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://twitter.com/ExecutiveMind5" target="_blank"><i class="fa fa-twitter"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://plus.google.com/113332397130970029386" target="_blank"><i class="fa fa-google-plus"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.youtube.com/channel/UCYnLRqqfS3U8oVRUqGERskg" target="_blank"><i class="fa fa-youtube"></i></a>
+                          </li>
+                          <li>
+                              <a href="https://www.pinterest.com/executivemind/" target="_blank"><i class="fa fa-pinterest"></i></a>
+                          </li>
+
+                          <li class="hidden-xs">
+                              <a href="https://www.instagram.com/executivemind/" target="_blank"><i class="fa fa-instagram"></i></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-6 footer-column not-right-column">
+                  <div class="footer-text">
+                      <h4>Advice for contacting us</h4>
+
+                      <p>Feel free to reach us regarding any of our offerings. It's our passion to help people do better with their reading, and learning in general. We try and respond to all messages as soon as we can.</p>
+                  </div>
+                  <div>
+                    <h4>Directions</h4>
+                    <p>Steps away from Penn Station, 5 minutes to Port Authority and 15 minutes away from Grand Central.
+</p>
+                  </div>
+              </div>
+      </div>
+  </section>
+<hr>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <p align="center">Copyright &copy; 2016 <a href="#">ExecutiveMind Inc.</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+  </body>
+</html>

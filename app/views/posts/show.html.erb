@@ -1,0 +1,14 @@
+<div class="col-md-4">
+  <p><%= image_tag @post.image.url(:medium) %><p>
+<h2><%= @post.title %></h2>
+<p class="date">submitted <%= time_ago_in_words(@post.created_at) %> ago</p> |
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'}  %>
+<p><%= @post.body %></p>
+<div id="comments">
+  <h2><%= pluralize(@post.comments.count, 'comment') %>  </h2>
+  <%= render @post.comments %>
+  <h2>Add Comment</h2>
+<%= render 'comments/form' %>
+</div>
+</div>
